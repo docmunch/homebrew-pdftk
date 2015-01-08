@@ -10,7 +10,8 @@ class Pdftk < Formula
   depends_on 'Homebrew/versions/gcc48' => [:build, 'enable-all-languages'] # or 'enable-java'
 
   def patches
-    'https://raw.githubusercontent.com/docmunch/homebrew-pdftk/fbe14dbb13d65a6847fc70ad521719ea9ad1353f/patch.diff'
+    'https://raw.githubusercontent.com/pborenstein/homebrew-pdftk/master/patch.diff'
+#    'https://raw.githubusercontent.com/docmunch/homebrew-pdftk/fbe14dbb13d65a6847fc70ad521719ea9ad1353f/patch.diff'
   end
 
   def install

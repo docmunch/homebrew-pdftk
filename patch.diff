@@ -46,6 +46,6 @@ index 8f7e52d..390c974 100644
  export GCJFLAGS= -Wall -fsource=1.3 -O2
  export GCJHFLAGS= -force
 -export LDLIBS= /sw/lib/gcc4.5/lib/libgcj.dylib /sw/lib/gcc4.5/lib/libstdc++.dylib /sw/lib/gcc4.5/lib/libgcc_s.1.dylib -liconv -lz
-+export LDLIBS= @PREFIX@/lib/gcc/@BUILD@/@GCC_VERSION@/libgcj.dylib @PREFIX@/lib/gcc/@BUILD@/@GCC_VERSION@/libstdc++.dylib @PREFIX@/lib/gcc/@BUILD@/@GCC_VERSION@/libgcc_s.1.dylib -liconv -lz
++export LDLIBS= /usr/local/Cellar/gcc48/4.8.4/lib/gcc/4.8/libgcj.dylib /usr/local/Cellar/gcc48/4.8.4/lib/gcc/4.8/libstdc++.dylib /usr/local/Cellar/gcc48/4.8.4/lib/gcc/4.8/libgcc_s.1.dylib -liconv -lz
  
  include Makefile.Base

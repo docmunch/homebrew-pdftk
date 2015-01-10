@@ -28,7 +28,7 @@ class Pdftk < Formula
         s.gsub! '@PREFIX@', Formula.factory('gcc48').prefix
         s.gsub! '@GCC_TOOL_VERSION@', "#{Formula.factory('gcc48').version}".sub(/(\d\.\d).*/,'-\1')
         s.gsub! '@GCC_VERSION@', Formula.factory('gcc48').version
-        s.gsub! '@BUILD@', "#{Formula.factory('gcc48').arch}-apple-darwin#{Formula.factory('gcc48').osmajor}"
+#       s.gsub! '@BUILD@', "#{Formula.factory('gcc48').arch}-apple-darwin#{Formula.factory('gcc48').osmajor}"
       end
 
       system 'make', '-f', 'Makefile.OSX-10.6'

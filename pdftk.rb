@@ -10,7 +10,8 @@ class Pdftk < Formula
   depends_on 'Homebrew/versions/gcc48' => [:build, 'enable-all-languages'] # or 'enable-java'
 
   def patches
-    'https://raw.githubusercontent.com/docmunch/homebrew-pdftk/fbe14dbb13d65a6847fc70ad521719ea9ad1353f/patch.diff'
+    'https://raw.githubusercontent.com/pborenstein/homebrew-pdftk/master/patch.diff'
+#    'https://raw.githubusercontent.com/docmunch/homebrew-pdftk/fbe14dbb13d65a6847fc70ad521719ea9ad1353f/patch.diff'
   end
 
   def install
@@ -27,7 +28,7 @@ class Pdftk < Formula
         s.gsub! '@PREFIX@', Formula.factory('gcc48').prefix
         s.gsub! '@GCC_TOOL_VERSION@', "#{Formula.factory('gcc48').version}".sub(/(\d\.\d).*/,'-\1')
         s.gsub! '@GCC_VERSION@', Formula.factory('gcc48').version
-        s.gsub! '@BUILD@', "#{Formula.factory('gcc48').arch}-apple-darwin#{Formula.factory('gcc48').osmajor}"
+#       s.gsub! '@BUILD@', "#{Formula.factory('gcc48').arch}-apple-darwin#{Formula.factory('gcc48').osmajor}"
       end
 
       system 'make', '-f', 'Makefile.OSX-10.6'
